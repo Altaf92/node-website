@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const routes = require("./routes/main");
 const Detail = require("./models/Detail");
+const Slider = require("./models/SliderModel");
 
 const PORT = 8080;
 
@@ -24,6 +25,31 @@ mongoose
   .then(() => {
     console.log("Connected to mongoDB");
 
+    // carousel slider section
+    // Slider.create([
+    //   {
+    //     title: "Web Development",
+    //     subTitle: "Responsive Web Development using Bootstrap and Tailwing CSS",
+    //     imageUrl: "/images/slider-1.webp",
+    //   },
+    //   {
+    //     title: "Frontend Development",
+    //     subTitle: "Responsive Frontend Web Development using React and Nextjs",
+    //     imageUrl: "/images/slider-2.webp",
+    //   },
+    //   {
+    //     title: "Full Stack Development",
+    //     subTitle: "Full Stack Web Development using MERN stack",
+    //     imageUrl: "/images/slider-3.webp",
+    //   },
+    //   {
+    //     title: "Admin Dashboard",
+    //     subTitle: "Beautiful Responsive Admin Dashboard with complete control",
+    //     imageUrl: "/images/slider-4.webp",
+    //   },
+    // ]);
+
+    // navbar section
     // Detail.create({
     //   brandName: "WEB SOLUTION",
     //   brandIconUrl: "/public/images/web.png",
