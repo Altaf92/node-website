@@ -5,6 +5,7 @@ const app = express();
 const routes = require("./routes/main");
 const Detail = require("./models/Detail");
 const Slider = require("./models/SliderModel");
+const Service = require("./models/ServiceModel");
 
 const PORT = 8080;
 
@@ -24,6 +25,59 @@ mongoose
   .connect("mongodb://localhost:27017/node_website")
   .then(() => {
     console.log("Connected to mongoDB");
+
+    // Service model
+    // Service.create([
+    //   {
+    //     icon: "fa-accusoft",
+    //     title: "Provide Best Services",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+
+    //   {
+    //     icon: "fa-globe",
+    //     title: "Web Development",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+    //   {
+    //     icon: "fa-toolbox",
+    //     title: "Admin Dashboard",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+    //   {
+    //     icon: "fa-object-ungroup",
+    //     title: "Responsive Web Design",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+    //   {
+    //     icon: "fa-web-awesome",
+    //     title: "MERN Stack Developer",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+    //   {
+    //     icon: "fa-react",
+    //     title: "React & NextJS Development",
+    //     description:
+    //       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae doloribus asperiores nisi? Est, corrupti minus.",
+    //     linkText: "Check",
+    //     linkUrl: "#",
+    //   },
+    // ]);
 
     // carousel slider section
     // Slider.create([

@@ -11,6 +11,33 @@
     
     {{>slider slides=slides}}
 
+    {{!-- services section  --}}
+
+    <section id="services_section" class="py-5">
+        <h1 class="text-center text-secondary">Services We Provide</h1>
+        <div class="container">
+            <div class="row mt-4">
+
+                {{#each services}}
+                <div class="col-md-4 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center service_icon py-3">
+                                <i class="{{this.icon}}"></i>
+                            </div>
+                            <h5 class="card-title">{{this.title}}</h5>
+                            <p>{{this.description}}</p>
+                            
+                            <a href="{{this.linkUrl}}">{{this.linkText}}</a>
+                            <a href="{{this.linkUrl}}" class="ml-4">Support</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
     {{>footer}}
 </body>
 </html>
