@@ -6,11 +6,18 @@ const routes = require("./routes/main");
 const Detail = require("./models/Detail");
 const Slider = require("./models/SliderModel");
 const Service = require("./models/ServiceModel");
+const bodyParser = require("body-parser");
 
 const PORT = 8080;
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 // static url
 app.use(express.static("public"));
+
 app.use("/", routes);
 
 // template engine configuration
