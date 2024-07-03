@@ -7,6 +7,7 @@ const Detail = require("./models/Detail");
 const Slider = require("./models/SliderModel");
 const Service = require("./models/ServiceModel");
 const bodyParser = require("body-parser");
+const Banner = require("./models/BannerModel");
 
 const PORT = 8080;
 app.use(
@@ -32,6 +33,24 @@ mongoose
   .connect("mongodb://localhost:27017/node_website")
   .then(() => {
     console.log("Connected to mongoDB");
+
+    // banner section
+
+    // Banner.create([
+    //   {
+    //     title: "We work for excellence",
+    //     description:
+    //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis eveniet ducimus exercitationem. Assumenda veniam a mollitia aliquid, amet facilis ullam, et tempora adipisci maxime saepe dolor accusantium iure nam!",
+    //     bannerUrl: "/images/banner-1.jpg",
+    //   },
+
+    //   {
+    //     title: "We work for excellence",
+    //     description:
+    //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis eveniet ducimus exercitationem. Assumenda veniam a mollitia aliquid, amet facilis ullam, et tempora adipisci maxime saepe dolor accusantium iure nam!",
+    //     bannerUrl: "/images/banner-2.jpg",
+    //   },
+    // ]);
 
     // Service model
     // Service.create([
